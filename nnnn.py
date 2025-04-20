@@ -8,22 +8,22 @@ import sympy as sp
 # إنشاء النافذة
 root = tk.Tk()
 root.title("NEWTON RAPHSON METHOD")
-root.geometry('1000x500+300+100')
+root.geometry('500x500+500+100')
 root.resizable( False , False )
 style = Style("journal")
 
 # مدخلات المستخدم
-label_func = tk.Label(root, text="Enter f(x):", font=("Cairo", 12))
-label_func.pack(pady=5)
+label_func = tk.Label(root, text="Enter f(x):", font=("Cairo", 14, "bold"))
+label_func.pack(pady=10)
 entry_func = tk.Entry(root, width=30, font=("Cairo", 12))
 entry_func.pack(pady=20)
 
-label_value = tk.Label(root, text="Enter initial value (x₀):", font=("Cairo", 12))
+label_value = tk.Label(root, text="Enter initial value (x₀):", font=("Cairo", 14, "bold"))
 label_value.pack(pady=5)
 entry_value = tk.Entry(root, width=30, font=("Cairo", 12))
 entry_value.pack(pady=20)
 
-label_iters = tk.Label(root, text="Enter the number of iterations:", font=("Cairo", 12))
+label_iters = tk.Label(root, text="Enter the number of iterations:", font=("Cairo", 14, "bold"))
 label_iters.pack(pady=5)
 entry_iters = tk.Entry(root, width=30, font=("Cairo", 12))
 entry_iters.pack(pady=20)
@@ -55,7 +55,7 @@ def newton_raphson():
         messagebox.showerror("Error", f"error was happened:\n{str(e)}")
 
 # زر التنفيذ
-btn = tk.Button(root, text="Calculate", command=newton_raphson, font=("Cairo", 12, "bold"), bg="#3498db", fg="white", padx=10)
+btn = tk.Button(root, text="Calculate", command=newton_raphson, font=("Cairo", 14, "bold"), bg="#3498db", fg="white", padx=10)
 btn.pack(pady=10)
 
 # تشغيل التطبيق
